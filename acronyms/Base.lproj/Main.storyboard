@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tlr-F2-K6g">
+                                <rect key="frame" x="0.0" y="77" width="600" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="aX3-LP-hhN" style="IBUITableViewCellStyleDefault" id="G9F-4x-s1y">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G9F-4x-s1y" id="AM2-BN-HAE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aX3-LP-hhN">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="lcH-Bh-JNW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2nE-5y-R3t"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Please Enter Acronym (eg:aa)" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQR-Ph-KUg">
+                                <rect key="frame" x="0.0" y="33" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RO3-Jk-Oae"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tlr-F2-K6g" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2Lj-up-zF9"/>
+                            <constraint firstItem="AQR-Ph-KUg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fa0-g5-dW2"/>
+                            <constraint firstItem="tlr-F2-K6g" firstAttribute="trailing" secondItem="AQR-Ph-KUg" secondAttribute="trailing" id="JRB-U9-WYc"/>
+                            <constraint firstAttribute="trailing" secondItem="AQR-Ph-KUg" secondAttribute="trailing" id="QcG-om-WcQ"/>
+                            <constraint firstItem="tlr-F2-K6g" firstAttribute="top" secondItem="AQR-Ph-KUg" secondAttribute="bottom" id="Xs6-Ga-sks"/>
+                            <constraint firstItem="AQR-Ph-KUg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="Z0A-m8-QGC"/>
+                            <constraint firstItem="AQR-Ph-KUg" firstAttribute="leading" secondItem="tlr-F2-K6g" secondAttribute="leading" id="fCm-wE-6rh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="AQR-Ph-KUg" id="vri-xR-yz6"/>
+                        <outlet property="tableView" destination="tlr-F2-K6g" id="vFt-lN-lpn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="293"/>
+        </scene>
+    </scenes>
+</document>
